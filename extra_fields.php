@@ -82,8 +82,8 @@ function pluginExtraFieldGUI($plugin_name) {
 
 function pluginExtraFieldSaveData() {
   global $xmls;
-  $xmls->addChild('extraField1')->addCData(isset($_POST['extraField1']) ? safe_slash_html($_POST['extraField1']) : '');
-  $xmls->addChild('extraField2')->addCData(isset($_POST['extraField2']) ? safe_slash_html($_POST['extraField2']) : '');
+  $xmls->editAddCData('extraField1', isset($_POST['extraField1']) ? safe_slash_html($_POST['extraField1']) : '');
+  $xmls->editAddCData('extraField2', isset($_POST['extraField2']) ? safe_slash_html($_POST['extraField2']) : '');
 }
 
 add_action('settings-website-extras', 'pluginExtraFieldGUI', array($thisfile));

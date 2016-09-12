@@ -22,6 +22,22 @@ function get_website_field($field, $echo = true) {
   global $dataw;
   return echoReturn(stripslashes($dataw->$field), $echo);
 }
+/*
+
+Possible solution:
+
+if (!is_fontend() && basename($_SERVER['PHP_SELF']) == 'settings.php' && isset($_POST['submitted'])) {
+  function get_website_field($field, $echo = true) {
+    global $xmls;
+    return echoReturn(stripslashes($xmls->$field), $echo);
+  }
+} else {
+  function get_website_field($field, $echo = true) {
+    global $dataw;
+    return echoReturn(stripslashes($dataw->$field), $echo);
+  }
+}
+*/
 
 function pluginExtraFieldGUI($plugin_name) {  
 ?>

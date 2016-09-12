@@ -39,7 +39,26 @@ if (!is_fontend() && basename($_SERVER['PHP_SELF']) == 'settings.php' && isset($
 }
 */
 
-function pluginExtraFieldGUI($plugin_name) {  
+function pluginExtraFieldGUI($plugin_name) {
+  /*
+  
+  Update $dataw with plugin:
+  
+  global $dataw;
+  
+  if (isset($_POST['submitted'])) {
+    $dataw = getXML(GSDATAOTHERPATH.'website.xml');
+  }
+  
+  or
+  
+  global $dataw, $xmls;
+  
+  if (isset($_POST['submitted'])) {
+    $dataw = $xmls;
+  }
+  
+  */
 ?>
 <h3><?php i18n($plugin_name.'/TITLE'); ?></h3>
 <div class="widesec">

@@ -59,6 +59,16 @@ function pluginExtraFieldGUI($plugin_name) {
   }
   
   */
+  
+  /*
+  
+  Fix translate after form submitting
+
+  if (isset($_POST['submitted'])) {
+    i18n_merge($plugin_name) || i18n_merge($plugin_name, 'en_US');
+  }
+
+  */
 ?>
 <h3><?php i18n($plugin_name.'/TITLE'); ?></h3>
 <div class="widesec">
